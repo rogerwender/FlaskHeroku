@@ -13,22 +13,48 @@
 </head>
 <body>
 <nav>
-    <input type="checkbox" id="checkbox">
-    <label class="btn" for="checkbox"><i class="fa fa-bars"></i> <span>Menu</span></label>
-    
-    <div class="sidebar">
-        <ul>
-            <a href="#"><li><i class="fa fa-tachometer"></i>Dashboard</li></a>
-            <a href="#"><li><i class="fa fa-lightbulb-o"></i>Widgets</li></a>
-            <a href="#" class="active"><li><i class="fa fa-line-chart"></i>Charts</li></a>
-            <a href="#"><li><i class="fa fa-television"></i>Front-End</li></a>
-            <a href="#"><li><i class="fa fa-send"></i>Email</li></a>
-            <a href="#"><li><i class="fa fa-wpforms"></i>Forms</li></a>
-            <a href="#"><li><i class="fa fa-paint-brush"></i>UI Elements</li></a>
-            <a href="#"><li><i class="fa fa-file-text-o"></i>Pages</li></a>
-            <a href="#"><li><i class="fa fa-globe"></i>Google Maps</li></a>
-        </ul>
-    </div>
+    <div class="menu-container">
+  
+        <div class="menu" id="menu">
+          
+          <input type="radio" id="radio-0" name="menu" checked />
+          <label class="tab" for="radio-0">
+            <div class="item">
+              <i class="fas fa-home fa-2x"></i>
+              <div class="item-title">Home</div>
+            </div>
+          </label>
+          
+          <input type="radio" id="radio-1" name="menu" />
+          <label class="tab" for="radio-1">
+            <div class="item">
+              <i class="fas fa-chart-pie fa-2x"></i>
+              <div class="item-title">Analytics</div>
+            </div>
+          </label>
+          
+          <input type="radio" id="radio-2" name="menu" />
+          <label class="tab" for="radio-2">
+            <div class="item">
+              <i class="fas fa-truck fa-2x"></i>
+              <div class="item-title">Delivery</div>
+            </div>
+          </label>
+          
+          <input type="radio" id="radio-3" name="menu" />
+          <label class="tab" for="radio-3">
+            <div class="item">
+              <i class="fas fa-shopping-cart fa-2x"></i>
+              <div class="item-title">Cart</div>
+            </div>
+          </label>
+          
+          <div class="blob-container">
+            <div class="blob"></div>
+          </div>
+      
+        </div>
+      </div>
 </nav>
 	
 <br><br><br><br><br><br>

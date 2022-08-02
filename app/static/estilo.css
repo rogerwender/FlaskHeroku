@@ -1,125 +1,156 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: 'Roboto', Arial, sans-serif;
+$bg-color: #537ec5;
+$text-color:  #010038;
+$inactive-item-color: #537ec5;
+$active-item-color: #010038;
+
+.fa-2x {
+  font-size: 26px;
+}
+
+.menu-container {
+  width: 500px;
+  height: 80px;
+  padding: 4px 20px 0px 20px;
+  background: #fff;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  z-index: 0;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: $inactive-item-color;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  transition: 0.25s ease-in;
+}
+
+.item {
+  text-align: center;
+}
+
+.item-title {
+  margin-top: 14px;
+  margin-bottom: -6px;
+  color: $text-color;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.blob-container {
+  position: absolute;
+  z-index: 0;
+  width: 25%;
+  transition: transform 0.2s ease-out;
+}
+
+.blob {
+  background: $active-item-color;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 2px auto;
+}
+
+input[type="radio"] {
+  &:checked {
+    & + label {
+      color: #fff;
+    }
+  }
+}
+
+input[id="radio-0"] {
+  &:checked {
+    ~ .blob-container {
+      transform: translateX(0%);
+      .blob {
+        animation: scaleY-0 .2s linear;
+      }
+    }
+  }
+}
+
+input[id="radio-1"] {
+  &:checked {
+    ~ .blob-container {
+      transform: translateX(100%);
+      .blob {
+        animation: scaleY-1 .2s linear;
+      }
+    }
+  }
+}
+
+input[id="radio-2"] {
+  &:checked {
+    ~ .blob-container {
+      transform: translateX(200%);
+      .blob {
+        animation: scaleY-2 .2s linear;
+      }
+    }
+  }
+}
+
+input[id="radio-3"] {
+  &:checked {
+    ~ .blob-container {
+      transform: translateX(300%);
+      .blob {
+        animation: scaleY-3 .2s linear;
+      }
+    }
+  }
+}
+
+@keyframes scaleY-0 {
+  0%  { transform: scale(0);}
+  60%  { transform: scaleY(0.5) translateY(30px); }
+  100% { transform: scaleY(1);}
+}
+
+@keyframes scaleY-1 {
+  0%  { transform: scale(0);}
+  60%  { transform: scaleY(0.5) translateY(-30px); }
+  100% { transform: scaleY(1);}
+}
+
+@keyframes scaleY-2 {
+  0%  { transform: scale(0); }
+  60%  { transform: scaleY(0.5) translateY(30px); }
+  100% { transform: scaleY(1); }
+}
+
+@keyframes scaleY-3 {
+  0%  { transform: scale(0); }
+  60%  { transform: scaleY(0.5) translateY(-30px); }
+  100% { transform: scaleY(1); }
 }
 
 body {
-    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-color;
+    font-family: 'Open Sans';
 }
-
-#checkbox, .btn span { /* Hide the checkbox input & word "Menu" in the button */
-    display: none;
-}
-
-/* Menu button - starts */
-.btn {
-    display: block;
-    background-color: #247D9E;
-    color: #fff;
-    width: 55px;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 20px;
-    cursor: pointer;
-    transition: width .3s ease-in-out;
-}
-/* Menu button - ends */
-
-/* Sidebar - starts */
-.sidebar {
-    background-color: #2B2E33;
-    position: fixed;
-    width: 250px;
-    height: 100%;
-    z-index: 1111;
-    transition: transform .3s ease-in-out;
-    transform: translateX(-250px);
-}
-
-.sidebar ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-
-.sidebar ul a {
-    position: relative;
-    text-decoration: none;
-    display: block;
-    background-color: transparent;
-    color: #BAB5BD;
-    padding: 15px 20px;
-    font-size: 16px;
-}
-
-.sidebar ul a li i {
-    margin-right: 15px;
-}
-
-/* Add the word "New" to the second item and "2" to the third item */
-.sidebar ul a:nth-child(2)::after, .sidebar ul a:nth-child(3)::after {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    margin-top: -9px;
-    color: #fff;
-    font-size: 13px;
-    padding: 0 7px;
-    height: 18px;
-    line-height: 18px;
-    text-align: center;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-
-.sidebar ul a:nth-child(2)::after {
-    content: "New";
-    background-color: tomato;
-}
-
-.sidebar ul a:nth-child(3)::after {
-    content: "2";
-    background-color: #247D9E;
-}
-
-/* Add margin to the icon in the second item */
-.sidebar ul a:nth-child(2) li i {
-    margin-left: 4px;
-    margin-right: 19px;
-}
-
-.sidebar ul a:hover, .sidebar ul a.active {
-    background-color: #161920;
-    color: #fff;
-}
-
-.sidebar ul a:hover::before, .sidebar ul a.active::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    background-color: #247D9E;
-    width: 4px;
-    height: 100%;
-}
-/* Sidebar - ends */
-
-/* Effect of showing the sidebar - starts */
-#checkbox:checked ~ .sidebar {
-    transform: translateX(0);
-}
-
-#checkbox:checked + .btn {
-    width: 250px;
-    padding: 0 20px;
-}
-
-#checkbox:checked + .btn span { /* Show again the word "Menu" in the button */
-    display: inline;
-}
-/* Effect of showing the sidebar - ends */
