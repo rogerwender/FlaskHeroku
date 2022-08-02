@@ -1,120 +1,23 @@
-html,
 body {
-    text-align: center;
-    background-color: #273559;     
+	background: linear-gradient(-45deg, #F2EEE3, #E9D1D0, #FAE0BA, #EB8C73, #F0DED1, #DEC4A7);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
 
-nav {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
-    .toggle {
-        height: 100%;
-        width: 100%;
-
-    }
-
-    input[type="checkbox"] {
-        opacity: 0;
-        position: absolute;
-        cursor: pointer;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-        z-index: 10;
-
-
-        &:checked {
-            ~ .btn {
-              &:after,
-            &:before {
-                  //transform: rotate(225deg);
-              }
-            }
-
-            ~ ul li {
-                @for $i from 1 through 6 {
-                    &:nth-child(#{$i}) {
-                        transform: rotate($i*60deg) translate(6em) rotate(-$i*60deg);
-                    }
-                }
-            }
-        }
-
-        &:hover {
-      ~ .btn {
-        background-color: #1782CC;
-        }
-        }
-    }
-    .btn {
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        background-color: #1DA2FF;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: transform 1.25s cubic-bezier(.8, 0, .2, 1), background-color 0.25s;
-        z-index: 9;
-    box-shadow: 0 5px 25px -4px rgba(0,0,0,0.5), inset 0 -3px 4px -1px rgba(0,0,0,0.2), 0 -5px 15px -1px rgba(104,193,255,0.4), inset 0 3px 4px -1px rgba(255,255,255,0.2);
-
-
-        &:after,
-        &:before {
-            content: '';
-            position: absolute;
-            background-color: #FFF;
-            border-radius: 4px;
-            transition: transform 1.25s cubic-bezier(.8, 0, .2, 1);
-        }
-
-         &:after {
-          width: 40px;
-            height: 8px;
-            top: 56px;
-            left: 40px;
-         }
-        &:before {
-            width: 8px;
-            height: 40px;
-            top: 40px;
-            left: 56px;
-        }
-    }
-    ul {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    }
-    li {
-        transition: transform 1.25s cubic-bezier(.7, 0, .3, 1);
-
-        a {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            line-height: 42px;
-            background-color: #1DA2FF;
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: background-color 0.5s;
-
-            .fa {
-        color: #fff;
-      }
-
-      &:hover {
-        background-color: #FF590D;
-      }
-        }
-    }
+h1 {
+    text-align: center;
+    color: #EB8C73;
 }
