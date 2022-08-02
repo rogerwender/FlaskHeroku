@@ -13,5 +13,5 @@ def contato():
     return render_template('contato.html')
 
 @app.route('/custoplanosaude')
-def CustoPlanoSaude():
+def custoplanosaude():
     return render_template('custoplanosaude.html')
