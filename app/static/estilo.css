@@ -31,9 +31,7 @@ h1 {
 html{   
   scroll-behavior: smooth;
 }
-body{
-  background: #262626;
-}
+
 .container{
   position: relative;
   width: 100%;   
