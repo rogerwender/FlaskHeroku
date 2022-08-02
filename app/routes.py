@@ -11,3 +11,7 @@ def index():
 @app.route('/contato')
 def contato():
     return render_template('contato.html')
+
+@app.route('/CustoPlanoSaude/templates')
+def CustoPlanoSaude():
+    return render_template('index.html')
