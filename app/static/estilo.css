@@ -19,15 +19,15 @@ body {
 
 h1 {
     text-align: center;
-    color: #6530af;
+    color: #5412cd;
 }
-
 
 *{
   padding: 0;
   margin: 0; 
   font-family: 'Montserrat', sans-serif;
 }
+
 html{   
   scroll-behavior: smooth;
 }
@@ -73,6 +73,6 @@ html{
   color: #fff;
 }
 .container ul li a:hover{
-  background: #ff5722;
+  background: #2aa8c7;
 
 }
