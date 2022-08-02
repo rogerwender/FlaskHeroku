@@ -12,53 +12,22 @@
  <![endif]-->
 </head>
 <body>
-    <div class="menu-container">
-  
-        <div class="menu" id="menu">
-          
-          <input type="radio" id="radio-0" name="menu" checked />
-          <label class="tab" for="radio-0">
-            <div class="item">
-              <i class="fas fa-home fa-2x"></i>
-              <div class="item-title">Home</div>
-            </div>
-          </label>
-          
-          <input type="radio" id="radio-1" name="menu" />
-          <label class="tab" for="radio-1">
-            <div class="item">
-              <i class="fas fa-chart-pie fa-2x"></i>
-              <div class="item-title">Analytics</div>
-            </div>
-          </label>
-          
-          <input type="radio" id="radio-2" name="menu" />
-          <label class="tab" for="radio-2">
-            <div class="item">
-              <i class="fas fa-truck fa-2x"></i>
-              <div class="item-title">Delivery</div>
-            </div>
-          </label>
-          
-          <input type="radio" id="radio-3" name="menu" />
-          <label class="tab" for="radio-3">
-            <div class="item">
-              <i class="fas fa-shopping-cart fa-2x"></i>
-              <div class="item-title">Cart</div>
-            </div>
-          </label>
-          
-          <div class="blob-container">
-            <div class="blob"></div>
-          </div>
-      
+    <nav>
+        <div class="toggle">
+          <input type="checkbox">
+          <span class="btn"></span>
+          <ul>
+            <li><a href=""><i class="fa fa-vimeo"></i></a></li>
+            <li><a href=""><i class="fa fa-instagram"></i></a></li>
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://github.com/fussinatto" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://codepen.io/fussinatto/" target="_blank"><i class="fa fa-codepen"></i></a></li>
+          </ul>
         </div>
-    </div>
+      </nav>
 	
 <br><br><br><br><br><br>
-	<h1 align="center">
-	<img src='PaginaEmConstrucao.png'>
-	</h1>
 
     {% extends 'base.html' %}
     
