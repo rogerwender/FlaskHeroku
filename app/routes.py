@@ -21,6 +21,13 @@ def predict():
     nome_da_variavel = "minha variavel teste"
     if request.method == 'POST':
         age = float(request.form['age'])
+        sex = request.form['sex']
+        if (sex == 'male'):
+            sex_male = 1
+            sex_female = 0
+        else:
+            sex_male = 0
+            sex_female = 1
     return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
     
     
@@ -29,7 +36,6 @@ def predict():
         age = float(request.form['age'])
         
         
-
         sex = request.form['sex']
         if (sex == 'male'):
             sex_male = 1
