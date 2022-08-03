@@ -19,13 +19,16 @@ def custoplanosaude():
 @app.route("/predict", methods=['POST'])
 def predict():
     nome_da_variavel = "minha variavel teste"
-    return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
-
-    """
     if request.method == 'POST':
+        age = float(request.form['age'])
+    return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
+    
+    
+    """
+    
 
         
-        age = float(request.form['age'])
+        
 
         sex = request.form['sex']
         if (sex == 'male'):
