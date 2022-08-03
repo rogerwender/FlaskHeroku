@@ -28,6 +28,40 @@ def predict():
         else:
             sex_male = 0
             sex_female = 1
+        
+        smoker = request.form['smoker']
+        if (smoker == 'yes'):
+            smoker_yes = 1
+            smoker_no = 0
+        else:
+            smoker_yes = 0
+            smoker_no = 1
+
+        bmi = float(request.form['bmi'])
+        children = int(request.form['children'])
+
+        region = request.form['region']
+        if (region == 'northwest'):
+            region_northwest = 1
+            region_southeast = 0
+            region_southwest = 0
+            region_northeast = 0
+        elif (region == 'southeast'):
+            region_northwest = 0
+            region_southeast = 1
+            region_southwest = 0
+            region_northeast = 0
+        elif (region == 'southwest'):
+            region_northwest = 0
+            region_southeast = 0
+            region_southwest = 1
+            region_northeast = 0
+        else:
+            region_northwest = 0
+            region_southeast = 0
+            region_southwest = 0
+            region_northeast = 1
+            
     return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
     
     
