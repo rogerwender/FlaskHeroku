@@ -1,5 +1,8 @@
 from app import app
 from flask import render_template
+from flask import Flask, render_template, request
+import numpy as np
+import pickle
 
 @app.route('/')
 @app.route('/index')
@@ -16,13 +19,7 @@ def contato():
 def custoplanosaude():
     return render_template('custoplanosaude.html')
 
-from flask import Flask, render_template, request
-import numpy as np
-import pickle
-
-app = Flask(__name__)
 model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
-
 
 @app.route("/predict", methods=['POST'])
 def predict():
@@ -77,10 +74,6 @@ def predict():
 
 
         return render_template('custoplanosauderesultado.html', prediction_text='A Estimativa de Custo do Plano de Saúde é de R$ {}'.format(prediction))
-
-
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
