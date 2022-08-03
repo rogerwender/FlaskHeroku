@@ -19,6 +19,7 @@ def custoplanosaude():
 @app.route("/predict", methods=['POST'])
 def predict():
     nome_da_variavel = "minha variavel teste"
+    age = request.form['age']
     return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
     
     
