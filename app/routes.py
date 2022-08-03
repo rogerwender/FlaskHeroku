@@ -19,7 +19,8 @@ def custoplanosaude():
 @app.route("/predict", methods=['POST'])
 def predict():
     nome_da_variavel = "minha variavel teste"
-
+    return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
+    
     #if request.method == 'POST':
 
         """
@@ -71,5 +72,5 @@ def predict():
         prediction = model.predict(values)
         prediction = round(prediction[0],2)
         """
-    return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
+    
         # return render_template('contato.html', prediction_text='A Estimativa de Custo do Plano de Saúde é de R$ {}'.format(prediction))
