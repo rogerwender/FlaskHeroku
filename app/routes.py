@@ -18,8 +18,9 @@ def custoplanosaude():
 
 @app.route("/predict", methods=['POST'])
 def predict():
-    
-    return render_template('contato.html', "teste")
+    nome_da_variavel = "Treinaweb"
+    return render_template('contato.html', variavel=nome_da_variavel)
+
     """
     if request.method == 'POST':
         age = float(request.form['age'])
