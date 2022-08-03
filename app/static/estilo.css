@@ -39,7 +39,7 @@ html{
 
 .container{
   position: relative;
-  width: 150%;   
+  width: 100%;   
 }
 
 .container section{
@@ -55,7 +55,7 @@ html{
 }
 .container section h1{
  text-align: center;
- font-size: 70px;
+ font-size: 170px;
  text-transform: uppercase;
 }
 
