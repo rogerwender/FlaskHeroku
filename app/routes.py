@@ -69,4 +69,3 @@ def predict():
 
 
         return render_template('result.html', prediction_text='A Estimativa de Custo do Plano de Saúde é de R$ {}'.format(prediction))
-
