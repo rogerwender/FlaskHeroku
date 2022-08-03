@@ -1,6 +1,8 @@
 from app import app
 from flask import render_template, redirect, request
 
+model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -16,7 +18,6 @@ def contato():
 def custoplanosaude():
     return render_template('custoplanosaude.html')
 
-model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
     nome_da_variavel = "minha variavel teste"
