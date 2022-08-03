@@ -19,6 +19,8 @@ def custoplanosaude():
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
     nome_da_variavel = "minha variavel teste"
+    if request.method == 'POST':
+        nome_da_variavel = "minha variavel teste"
     return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
     
     
