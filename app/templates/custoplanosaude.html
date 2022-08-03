@@ -5,7 +5,52 @@
 <div style="color:#ffffff;" class="container">
     <h2 class='container_cabecalho'><span class="fonte_cabecalho">Previsão de Custo Anual do Plano de Saúde</span></h2>
 </div>
-    
+
+<div style="color:white;" class="ml-container">
+    <form action="{{ url_for('predict') }}" method="POST">
+        <br>
+        <br>
+        <h3>Idade</h3>
+        <input id="idade" size="50" maxlength="50"  name="age" placeholder="Em anos" required="required">
+        <h3>Sexo</h3>
+        <select id="sexo" class="form-input align-center" name="sex">
+            <option value="None">Sexo</option>
+            <option value="sex_male">Masculino</option>
+            <option value="sex_female">Feminino</option>
+        </select>
+        <h3>Fumante</h3>
+        <select id="fumante" class="form-input align-center" name="smoker">
+            <option value="None">Fumante</option>
+            <option value="smoker_yes">Sim</option>
+            <option value="smoker_no">Nao</option>
+        </select>
+        <h3>Indice de Massa Corpórea</h3>
+        <input id="imc" name="bmi" placeholder="IMC" required="required">
+        <br><br>
+        <h3>Número de Filhos</h3>
+        <input id="filhos" name="children" placeholder="0, 1, 2, 3, 4, 5" required="required">
+        <br><br>
+        <h3>Região</h3>
+        <select id="regiao" class="form-input align-center" name="region">
+            <option value="None">Selecione</option>
+            <option value="region_northwest">North-West</option>
+            <option value="region_southeast">South-East</option>
+            <option value="region_southwest">South-West</option>
+            <option value="region_northeast">North-East</option>
+        </select>
+        <br>
+        <br>
+        <br>
+        <button id="sub" type="submit ">Enviar</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class='footer-description'>©2022 - Projeto de Estudo de Ciência de Dados</p>
+
+    </form>
+</div>
+
 
 
 {% endblock %}
