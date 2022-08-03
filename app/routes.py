@@ -18,10 +18,8 @@ def custoplanosaude():
 
 @app.route("/predict", methods=['POST'])
 def predict():
-    nome_da_variavel = "Treinaweb"
-    return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
+    nome_da_variavel = "minha variavel teste"
 
-    """
     if request.method == 'POST':
         age = float(request.form['age'])
 
@@ -70,6 +68,5 @@ def predict():
         values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
         prediction = model.predict(values)
         prediction = round(prediction[0],2)
-
-        return render_template('contato.html', prediction_text='A Estimativa de Custo do Plano de Saúde é de R$ {}'.format(prediction))
-"""
+        return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
+        # return render_template('contato.html', prediction_text='A Estimativa de Custo do Plano de Saúde é de R$ {}'.format(prediction))
