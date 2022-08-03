@@ -1,6 +1,5 @@
 from app import app
 from flask import render_template
-from flask import Flask, render_template, request
 import numpy as np
 import pickle
 
@@ -19,7 +18,7 @@ def contato():
 def custoplanosaude():
     return render_template('custoplanosaude.html')
 
-model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
+
 
 @app.route("/predict", methods=['POST'])
 def predict():
