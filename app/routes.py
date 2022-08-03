@@ -16,7 +16,7 @@ def contato():
 def custoplanosaude():
     return render_template('custoplanosaude.html')
 
-@app.route("/predict", methods=['POST'])
+@app.route("/predict", methods = ['POST', 'GET'])
 def predict():
     nome_da_variavel = "minha variavel teste"
     return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
