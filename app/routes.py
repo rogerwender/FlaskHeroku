@@ -18,7 +18,8 @@ def custoplanosaude():
 
 @app.route("/predict", methods=['POST'])
 def predict():
-    return render_template('contato.html')
+    
+    return render_template('contato.html', prediction)
     """
     if request.method == 'POST':
         age = float(request.form['age'])
