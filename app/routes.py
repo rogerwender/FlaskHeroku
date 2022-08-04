@@ -20,7 +20,7 @@ def custoplanosaude():
 
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
-    print(' mEU ')
+    print("mEU")
     if request.method == 'POST':
         age = float(request.form['age'])
         sex = request.form['sex']
