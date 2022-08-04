@@ -70,4 +70,4 @@ def predict():
     #prediction = model.predict(values)
     #prediction = round(prediction[0],2)
 
-    return render_template('custoplanosauderesultado.html', "teste")
+    return render_template('custoplanosauderesultado.html')
