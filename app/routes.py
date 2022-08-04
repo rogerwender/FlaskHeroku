@@ -66,6 +66,11 @@ def predict():
             region_southwest = 0
             region_northeast = 1
 
+
+    values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
+    prediction = model.predict(values)
+    prediction = round(prediction[0],2)
+
     return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
     
     
