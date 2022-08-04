@@ -3,8 +3,6 @@ import pickle
 from app import app
 from flask import render_template, redirect, request
 
-model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
-
 @app.route('/')
 @app.route('/index')
 def index():
@@ -65,7 +63,7 @@ def predict():
             region_southwest = 0
             region_northeast = 1
 
-    
+    model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))    
 
     #values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
     #prediction = model.predict(values)
