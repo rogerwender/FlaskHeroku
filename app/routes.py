@@ -20,6 +20,7 @@ def custoplanosaude():
 
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
+    print(request.method)
     if request.method == 'POST':
         age = float(request.form['age'])
         sex = request.form['sex']
@@ -63,7 +64,6 @@ def predict():
             region_southwest = 0
             region_northeast = 1
 
-    model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))    
 
     #values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
     #prediction = model.predict(values)
