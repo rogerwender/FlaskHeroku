@@ -1,6 +1,5 @@
 from app import app
 from flask import render_template, redirect, request
-
 import numpy as np
 import pickle
 
@@ -64,8 +63,6 @@ def predict():
             region_southeast = 0
             region_southwest = 0
             region_northeast = 1
-
-    values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
 
     return render_template('custoplanosauderesultado.html', variavel=nome_da_variavel)
     
