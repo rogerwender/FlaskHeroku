@@ -2,8 +2,6 @@ import numpy as np
 from app import app
 from flask import render_template, redirect, request
 
-# model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
-
 @app.route('/')
 @app.route('/index')
 def index():
@@ -21,7 +19,6 @@ def custoplanosaude():
 
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
-    nome_da_variavel = "minha variavel teste"
     if request.method == 'POST':
         age = float(request.form['age'])
         sex = request.form['sex']
