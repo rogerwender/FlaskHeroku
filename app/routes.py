@@ -3,6 +3,7 @@ import pickle5 as pickle
 from app import app
 from flask import render_template, redirect, request
 
+model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
 
 @app.route('/')
 @app.route('/index')
