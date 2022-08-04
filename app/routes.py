@@ -70,4 +70,4 @@ def predict():
     #prediction = model.predict(values)
     #prediction = round(prediction[0],2)
 
-    return render_template('custoplanosauderesultado.html', prediction_text='A Estimativa de Custo do Plano de Saúde é de R$ {}'.format(prediction))
+    return render_template('custoplanosauderesultado.html', "teste")
