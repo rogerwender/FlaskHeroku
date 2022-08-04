@@ -1,6 +1,7 @@
 
 from app import app
 from flask import render_template, redirect, request
+import numpy as np
 
 @app.route('/')
 @app.route('/index')
