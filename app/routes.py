@@ -1,6 +1,8 @@
 from app import app
 from flask import render_template, redirect, request
 
+import numpy as np
+import pickle
 
 @app.route('/')
 @app.route('/index')
