@@ -1,3 +1,6 @@
+import numpy as np
+import pandas as pd
+
 from app import app
 from flask import render_template, redirect, request
 
