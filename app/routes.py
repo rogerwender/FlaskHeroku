@@ -20,7 +20,7 @@ def custoplanosaude():
 
 @app.route('/calculadora')
 def calculadora():
-    return render_template('/HTMLCSS/calculadora.html')
+    return render_template('/calculadora.html')
 
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
