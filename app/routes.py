@@ -18,6 +18,10 @@ def contato():
 def custoplanosaude():
     return render_template('custoplanosaude.html')
 
+@app.route('/calculadora')
+def calculadora():
+    return render_template('/HTMLCSS/calculadora.html')
+
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
     print("mEU")
