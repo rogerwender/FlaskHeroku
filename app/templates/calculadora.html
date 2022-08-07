@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
     <title>Calculadora - Rogério Wender</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='calculadora.css')}}" />
-    <script type=text/javascript src="./static/calculadora.js"></script>
-    <script type=text/javascript src="./calculadora.js"></script> 
+    <link rel="script" href="{{ url_for('static', filename= 'calculadora.js')}}"/>
+    <script type=text/javascript src="{{url_for('static', filename='static/calculadora.js') }}"></script> 
 </head>
 <body>
     <div class="calculator">  
