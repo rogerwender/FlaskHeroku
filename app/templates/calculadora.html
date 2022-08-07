@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"> 
-    <title>Teste</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Interactive Card </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='calculadora.css')}}" />
-    
 </head>
+
 <body>
-    <p>Simple Clock using JavaScript</p>
-<div id="DisplayClock" class="clock" onload="showTime()">
-  <script type="text/javascript" src="{{ url_for('static', filename='calculadora.js') }}"></script>
-</div>
+    <div class="overlay">
+    </div>
+
+    <div class="wrapper">
+        <div class="card card-0">
+            <div class="glare-container">
+                <div class="glare">
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-1">
+            <div class="glare-container">
+                <div class="glare">
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-2">
+            <div class="glare-container">
+                <div class="glare">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript Here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='calculadora.js') }}"></script>
 </body>
+
 </html>
