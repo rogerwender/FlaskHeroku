@@ -1,71 +1,58 @@
-body {
-    margin: 0;
-    background-color: #eee;
-    background-image: url("https://images7.alphacoders.com/938/thumb-1920-938300.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .overlay {
-    background-color: rgba(255, 255, 255, 0.4);
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-  }
-  
-  .card {
-    backdrop-filter: blur(5px);
-    min-width: 35vh;
-    height: 55vh;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.051),
-      0px 0px 7.2px rgba(0, 0, 0, 0.073), 0px 0px 13.6px rgba(0, 0, 0, 0.09),
-      0px 0px 24.3px rgba(0, 0, 0, 0.107), 0px 0px 45.5px rgba(0, 0, 0, 0.129),
-      0px 0px 109px rgba(0, 0, 0, 0.18);
-  }
-  
-  .glare-container {
+.content {
+    margin-top: 54px;
+    }
+    .header {
+    padding: 15px;
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .glare {
-    position: absolute;
-    left: 100%;
-    bottom: -50%;
-    width: 150%;
-    height: 150%;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0) 20%
-    );
-    transform: rotateZ(35deg);
-    pointer-events: none;
-    filter: blur(4px);
-  }
-  
-  .card-0{
-    background-color: rgba(0, 166, 255, 0.3);
-  }
-  
-  .card-1 {
-    background-color: rgba(255, 59, 0, 0.37);
-  }
-  
-  .card-2 {
-    background-color: rgba(255, 0, 0, 0.23);
-  }
-  
-  .wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    height: 100vh;
-  }
+    z-index: 9999;
+    }
+    .left-title {
+    width: 80px;
+    color: #fff;
+    font-size: 18px;
+    float: left;
+    }
+    .right-title {
+    width: 150px;
+    text-align: right;
+    float: right;
+    color: #fff;
+    }
+    .quiz-body {
+    margin-top: 15px;
+    padding-bottom: 50px;
+    }
+    .option-block-container {
+    margin-top: 20px;
+    max-width: 420px;
+    }
+    .option-block {
+    padding: 10px;
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    margin-bottom: 10px;
+    cursor: pointer;
+    }
+    .result-question {
+    font-weight: bold;
+    }
+    .c-wrong {
+    margin-left: 20px;
+    color: #ff0000;
+    }
+    .c-correct {
+    margin-left: 20px;
+    color: green;
+    }
+    .last-row {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    }
+    .res-header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    }
