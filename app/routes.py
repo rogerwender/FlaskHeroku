@@ -70,8 +70,9 @@ def predict():
             region_northeast = 1
 
         
-    file = open('/MedicalInsuranceCost.pkl', 'rb')
+    #file = open('/MedicalInsuranceCost.pkl', 'rb')
     #model = pickle.load(file)
+    file = load('MedicalInsuranceCost.pkl')
    
     values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
     #prediction = model.predict(values)
