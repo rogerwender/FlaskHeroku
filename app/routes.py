@@ -25,8 +25,6 @@ def calculadora():
 
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
-    model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
-
     if request.method == 'POST':
         age = float(request.form['age'])
         sex = request.form['sex']
@@ -71,7 +69,8 @@ def predict():
             region_northeast = 1
 
         
-
+    file = open('MedicalInsuranceCost.pkl', 'rb')
+    model = pickle.load(file)
    
     values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
     #prediction = model.predict(values)
