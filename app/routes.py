@@ -68,9 +68,9 @@ def predict():
             region_southwest = 0
             region_northeast = 1
 
-        #model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
+        
 
-
+    model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
     values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
     #prediction = model.predict(values)
     #prediction = round(prediction[0],2)
