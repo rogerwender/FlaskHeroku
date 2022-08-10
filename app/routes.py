@@ -1,7 +1,9 @@
-import numpy as np
-import pickle
 from app import app
 from flask import render_template, redirect, request
+import numpy as np
+import pickle
+
+model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
 
 @app.route('/')
 @app.route('/index')
@@ -70,7 +72,7 @@ def predict():
 
         
 
-    model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
+   
     values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
     #prediction = model.predict(values)
     #prediction = round(prediction[0],2)
