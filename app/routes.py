@@ -1,6 +1,7 @@
 
 from app import app
 from flask import render_template, redirect, request
+from joblib import load
 import numpy as np
 import pickle
 
