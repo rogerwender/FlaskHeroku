@@ -4,8 +4,6 @@ from flask import render_template, redirect, request
 import numpy as np
 import pickle
 
-model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
-
 @app.route('/')
 @app.route('/index')
 def index():
@@ -27,7 +25,8 @@ def calculadora():
 
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
-    print("mEU")
+    model = pickle.load(open('MedicalInsuranceCost.pkl', 'rb'))
+
     if request.method == 'POST':
         age = float(request.form['age'])
         sex = request.form['sex']
