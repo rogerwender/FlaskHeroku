@@ -26,16 +26,16 @@ def previsaofilmes():
 
 @app.route('/previsaofilmesresultado')
 def previsaofilmesresultado():
-    model = pickle.load(open('previsaofilmesresultado.pkl', 'rb'))
+    #model = pickle.load(open('previsaofilmesresultado.pkl', 'rb'))
     #values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
     #prediction = model.predict(values)
     #prediction = round(prediction[0],2)
-    prediction = "teste"
+    texto = "teste"
 
 
-    return render_template('result.html', prediction_text='A Estimativa de Custo do Plano de Saúde é de R$ {}'.format(prediction))
+    return render_template('previsaofilmesresultado.html', prediction_text=texto)
 
-    return render_template('previsaofilmesresultado.html')    
+    #return render_template('previsaofilmesresultado.html')    
 
 @app.route('/calculadora')
 def calculadora():
