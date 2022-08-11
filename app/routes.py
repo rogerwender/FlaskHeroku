@@ -24,6 +24,10 @@ def custoplanosaude():
 def previsaofilmes():
     return render_template('previsaofilmes.html')
 
+@app.route('/previsaofilmesresultado')
+def previsaofilmesresultado():
+    return render_template('previsaofilmesresultado.html')    
+
 @app.route('/calculadora')
 def calculadora():
     return render_template('calculadora.html')
