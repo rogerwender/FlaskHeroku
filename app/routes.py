@@ -20,6 +20,10 @@ def contato():
 def custoplanosaude():
     return render_template('custoplanosaude.html')
 
+@app.route('/previsaofilmes')
+def previsaofilmes():
+    return render_template('previsaofilmes.html')
+
 @app.route('/calculadora')
 def calculadora():
     return render_template('calculadora.html')
