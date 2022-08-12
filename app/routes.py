@@ -26,8 +26,6 @@ def previsaofilmes():
 
 @app.route('/previsaofilmesresultado', methods = ['POST', 'GET'])
 def previsaofilmesresultado():
-    #model = 
-    open("previsaofilmesresultado.pkl", "r")
     #model = pickle.load(open('previsaofilmesresultado.pkl', 'rb'))
     #values = np.array([[age,sex_male,smoker_yes,bmi,children,region_northwest,region_southeast,region_southwest]])
     #prediction = model.predict(values)
