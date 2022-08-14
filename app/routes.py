@@ -41,7 +41,7 @@ def previsaofilmesresultado():
 def calculadora():
     if request.method == 'POST':
         print('oiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii')
-        # valor = request.form['valor']
+        valor = request.form['valor']
 
     return render_template('calculadora.html')    
     #return render_template('calculadora.html', valor = valor)
