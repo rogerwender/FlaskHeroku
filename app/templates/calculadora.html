@@ -1,42 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Javascript Quiz</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='calculadora.css')}}" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-</head>
-<body>
-<header class="header bg-primary">
-<div class="left-title">JS Quiz</div>
-<div class="right-title">Total Questions: <span id="tque"></span></div>
-<div class="clearfix"></div>
-</header>
-<div class="content">
-<div class="container-fluid">
-<div class="row">
-<div class="col-sm-12">
-<div id="result" class="quiz-body">
-<form name="quizForm" onSubmit="">
-<fieldset class="form-group">
-<h4><span id="qid">1.</span> <span id="question"></span></h4>
-<div class="option-block-container" id="question-options">
-</div> <!-- End of option block -->
-</fieldset>
-<button name="previous" id="previous" class="btn btn-success">Previous</button>
-&nbsp;
-<button name="next" id="next" class="btn btn-success">Next</button>
-</form>
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<div style="color:#ffffff;" class="container">
+    <br>
+    <h2 class='container_cabecalho'>
+        <span class="fonte_cabecalho" style="color:white;">Previsão de Filmes</span></h2>
 </div>
-</div> <!-- End of col-sm-12 -->
-</div> <!-- End of row -->
-</div> <!-- ENd of container fluid -->
-</div> <!-- End of content -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='calculadora.js') }}"></script>
-</body>
-</html>
+
+<div style="color:white;" class="ml-container">
+    <form action="{{ url_for('calculadora') }}" method="POST">
+        <br>
+        <br>
+        <h3>Idade</h3>
+        <input id="idade"  class="caixas" size="50" maxlength="50"  name="age" placeholder="Em anos" required="required">
+        <br><br><br>
+        <button id="sub" type="submit ">Enviar</button>
+        <br><br><br><br><br>     
+    </form>
+</div>
+
+<style>
+
+    /* Imagem de fundo */
+    body
+    {
+    background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    
+    height: 90%;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    }
+    
+    /* Color */
+    body{
+        font-family: Arial, Helvetica,sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Heading Font */
+    .container_cabecalho{
+        margin: 10;
+    }
+    
+    .fonte_cabecalho{
+        color: 'color:white';
+        font-family: 'Pacifico', cursive;
+        font-size: 50px;
+        font-weight: normal;
+    }
+    
+    .caixas {
+                border-radius: 14px;
+                height: 25px;
+                width: 200px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+    
+    /* Submit Button */
+    #sub {
+                width: 150px;
+                height: 43px;
+                text-align: center;
+                border-radius: 14px;
+                font-size: 18px;
+            }
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </style>
+
+{% endblock %}
