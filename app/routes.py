@@ -41,7 +41,7 @@ def previsaofilmesresultado():
 def calculadora():
     teste =  "Vvai funcionar saporra RRSS" 
     meu = request.form['valor']
-    return render_template('calculadora.html', valor=teste)
+    return render_template('calculadora.html', valor=teste, meu = meu)
 
     #marca = request.form['valor']
 
