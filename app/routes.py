@@ -55,7 +55,7 @@ def predict():
             sex_male = 0
             sex_female = 1
         
-        smoker = request.form['smoker']
+        smoker = request.form.get('smoker')
         if (smoker == 'yes'):
             smoker_yes = 1
             smoker_no = 0
@@ -63,7 +63,7 @@ def predict():
             smoker_yes = 0
             smoker_no = 1
 
-        bmi = float(request.form.get('bmi')
+        bmi = float(request.form.get('bmi'))
         children = int(request.form.get('children'))
 
         region = request.form.get('region')
