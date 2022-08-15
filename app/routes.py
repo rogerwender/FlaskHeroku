@@ -4,7 +4,7 @@ from flask import render_template, redirect, request
 
 import numpy as np
 import pickle
-import wikipedia
+import pyshorteners
 
 @app.route('/')
 @app.route('/index')
@@ -41,8 +41,10 @@ def previsaofilmesresultado():
 @app.route('/calculadora', methods=['POST','GET'])
 def calculadora():
     valordigitado = request.form.get('valor')
-    #resultado = wikipedia.summary(valordigitado)
-    return render_template('calculadora.html', meuvalor='O resultado após processamento é {}'.format(valordigitado))
+    s = pyshorteners.Shortener()
+    shortUrl = s.tinyurl.short(valordigitado)
+
+    return render_template('calculadora.html', meuvalor='O resultado após processamento é {}'.format(shortUrl))
 
 
 @app.route("/predict", methods = ['POST', 'GET'])
