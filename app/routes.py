@@ -38,13 +38,13 @@ def previsaofilmesresultado():
 
     return render_template('previsaofilmesresultado.html')    
 
-@app.route('/encurtadorurl', methods=['POST','GET'])
-def encurtadorurl():
+@app.route('/calculadora', methods=['POST','GET'])
+def calculadora():
     valordigitado = request.form.get('valor')
     s = pyshorteners.Shortener()
     u = s.tinyurl.short(valordigitado)
 
-    return render_template('encurtadorurl.html', meuvalor='O resultado após processamento é ... {}'.format(u))
+    return render_template('calculadora.html', meuvalor='O resultado após processamento é ... {}'.format(u))
 
 
 @app.route("/predict", methods = ['POST', 'GET'])
