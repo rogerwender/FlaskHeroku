@@ -39,8 +39,7 @@ def previsaofilmesresultado():
 
 @app.route('/calculadora', methods=['GET','POST'])
 def calculadora():
-    if request.method == 'POST':
-        teste = "meu novo valor"
+    teste = "meu novo valor"
     
     return render_template('calculadora.html', valor=teste)
         #return render_template('calculadora.html', valor= request.form['valor'])
