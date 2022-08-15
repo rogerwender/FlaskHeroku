@@ -44,7 +44,7 @@ def calculadora():
     s = pyshorteners.Shortener()
     u = s.tinyurl.short(valordigitado)
 
-    return render_template('calculadora.html', meuvalor='O resultado após processamento é ... {}'.format(u))
+    return render_template('encurtadorurl.html', meuvalor='O resultado após processamento é ... {}'.format(u))
 
 
 @app.route("/predict", methods = ['POST', 'GET'])
