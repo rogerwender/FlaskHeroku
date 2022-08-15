@@ -46,8 +46,8 @@ def calculadora():
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
     if request.method == 'POST':
-        age = float(request.form['age'])
-        sex = request.form['sex']
+        age = float(request.form.get('age'))
+        sex = request.form.get('sex')
         if (sex == 'male'):
             sex_male = 1
             sex_female = 0
@@ -63,10 +63,10 @@ def predict():
             smoker_yes = 0
             smoker_no = 1
 
-        bmi = float(request.form['bmi'])
-        children = int(request.form['children'])
+        bmi = float(request.form.get('bmi')
+        children = int(request.form.get('children'))
 
-        region = request.form['region']
+        region = request.form.get('region')
         if (region == 'northwest'):
             region_northwest = 1
             region_southeast = 0
