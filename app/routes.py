@@ -39,7 +39,7 @@ def previsaofilmesresultado():
 
 @app.route('/calculadora', methods=['GET','POST'])
 def calculadora():
-    teste = "Vvai funcionar saporra RR"
+    teste = request.form['valor'] #"Vvai funcionar saporra RR"
     return render_template('calculadora.html', valor=teste)
 
     #marca = request.form['valor']
