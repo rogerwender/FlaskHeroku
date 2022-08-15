@@ -41,10 +41,10 @@ def previsaofilmesresultado():
 @app.route('/calculadora', methods=['POST','GET'])
 def calculadora():
     valordigitado = string(request.form.get('valor'))
-    s = pyshorteners.Shortener()
-    u = s.tinyurl.short(valordigitado)
+    #s = pyshorteners.Shortener()
+    #u = s.tinyurl.short(valordigitado)
 
-    return render_template('calculadora.html', meuvalor='O resultado após processamento é {}'.format(u))
+    return render_template('calculadora.html', meuvalor='O resultado após processamento é {}'.format(valordi))
 
 
 @app.route("/predict", methods = ['POST', 'GET'])
