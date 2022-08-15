@@ -42,8 +42,8 @@ def calculadora():
     teste = "meu novo valor vai funcionar saporra"
     marca = request.form['valor']
 
-    return render_template('calculadora.html', valor=teste)
-        #return render_template('calculadora.html', valor= request.form['valor'])
+    #return render_template('calculadora.html', valor=teste)
+    return render_template('calculadora.html', valor=marca)
 
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
