@@ -41,8 +41,8 @@ def previsaofilmesresultado():
 @app.route('/calculadora', methods=['POST','GET'])
 def calculadora():
     valordigitado = request.form.get('valor')
-    resultado = wikipedia.summary(valordigitado)
-    return render_template('calculadora.html', meuvalor='O resultado após processamento é {}'.format(resultado))
+    #resultado = wikipedia.summary(valordigitado)
+    return render_template('calculadora.html', meuvalor='O resultado após processamento é {}'.format(valordigitado))
 
 
 @app.route("/predict", methods = ['POST', 'GET'])
