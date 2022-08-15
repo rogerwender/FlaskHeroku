@@ -40,10 +40,10 @@ def previsaofilmesresultado():
 @app.route('/calculadora', methods=['GET','POST'])
 def calculadora():
     teste = "meu novo valor vai funcionar saporra"
-    marca = request.form['valor']
+    #marca = request.form['valor']
 
-    #return render_template('calculadora.html', valor=teste)
-    return render_template('calculadora.html', valor=marca)
+    return render_template('calculadora.html', valor=teste)
+    #return render_template('calculadora.html', valor=marca)
 
 @app.route("/predict", methods = ['POST', 'GET'])
 def predict():
