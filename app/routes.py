@@ -4,6 +4,7 @@ from flask import render_template, redirect, request
 
 import numpy as np
 import pickle
+import wikipedia
 
 @app.route('/')
 @app.route('/index')
