@@ -39,8 +39,8 @@ def previsaofilmesresultado():
 
 @app.route('/calculadora', methods=['POST','GET'])
 def calculadora():    
-    carai = request.form['valor']
-    return render_template('calculadora.html', valor=carai)
+    #carai = request.form['valor']
+    return render_template('calculadora.html', valor="carai")
 
     
     #return render_template('calculadora.html', valor=marca)
