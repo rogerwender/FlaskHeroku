@@ -42,7 +42,7 @@ def previsaofilmesresultado():
 def calculadora():
     if request.method == 'POST':
         valordigitado = request.form.get('valor')
-        s = pyshorteners.Shortener()
+        #s = pyshorteners.Shortener()
         #u = s.tinyurl.short(valordigitado)
         u = "teste"
         return render_template('calculadora.html', meuvalor='O resultado após processamento é ## {}'.format(u))
