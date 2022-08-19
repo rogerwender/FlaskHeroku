@@ -25,6 +25,10 @@ def custoplanosaude():
 def previsaofilmes():
     return render_template('previsaofilmes.html')
 
+@app.route('/barraprogresso')
+def barraprogresso():
+    return render_template('barraprogresso.html')
+
 @app.route('/previsaofilmesresultado', methods = ['POST', 'GET'])
 def previsaofilmesresultado():
     #model = pickle.load(open('previsaofilmesresultado.pkl', 'rb'))
